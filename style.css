@@ -1,0 +1,218 @@
+<style type="text/css">
+               /*
+               * Copyright (c) 2013 Thibaut Courouble
+               * http://www.cssflow.com
+               * Licensed under the MIT License
+               *
+               * Sass/SCSS source: https://goo.gl/1r6UDT
+               * PSD by Aaron Sananes: https://goo.gl/AlBLzO
+               */
+
+               /* body {
+                          font: 12px/20px 'Lucida Grande', Verdana, sans-serif;
+                          color: #404040;
+                          background: #eee;
+                      }*/
+
+               #container {
+                   width: 100%;
+                   margin: 20px auto;
+                   font-family: Arial, Helvetica, sans-serif;
+               }
+
+               .footer {
+                   padding: 5px;
+                   text-align: center;
+                   background: #FF5B33;
+                   color: #fcfcfc;
+                   font-family: Arial, Helvetica, sans-serif;
+                   font-size: 20px;
+                   /*   margin-top: 50px;*/
+               }
+               /* Create two unequal columns that floats next to each other */
+               .column {
+                   float: left;
+                   /* padding: 10px;*/
+                   /*height: 300px;*/ /* Should be removed. Only for demonstration */
+               }
+
+               .left10 {
+                   /*width: auto;*/
+                   width: 10%;
+               }
+
+               .left {
+                   /*width: auto;*/
+                   width: 25%;
+                   text-align: center;
+               }
+
+               .right {
+                   /*width: auto;*/
+                   width: 75%;
+                   padding-right: 0px;
+               }
+
+               /* Clear floats after the columns */
+               .row {
+                   font-family: Arial, Helvetica, sans-serif;
+                   font-size: 14px;
+                   padding: 5px;
+                   text-align: left;
+                   background: white;
+                   color: black;
+               }
+
+                   .row:after {
+                       content: "";
+                       display: table;
+                       clear: both;
+                   }
+
+               .sub-container {
+                   border: 1px solid #ff5b33;
+                   -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                   box-sizing: border-box;
+                   -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,0.05);
+               }
+
+               .header {
+                   padding: 0px;
+               }
+
+                   .header .title {
+                       padding: 13px;
+                       text-align: center;
+                       background: #FF5B33;
+                       color: #fcfcfc;
+                       font-family: Arial, Helvetica, sans-serif;
+                       font-size: 40px;
+                   }
+
+               .detail {
+                   padding: 5px;
+                   text-align: left;
+                   background: white;
+                   color: black;
+               }
+
+               .title {
+                   font-family: Arial, Helvetica, sans-serif;
+                   font-size: 24px;
+                   font-weight: 600;
+                   padding-top: 5px;
+                   padding-bottom: 5px;
+               }
+
+               ul.square {
+                   list-style-type: square;
+               }
+
+               table {
+                   border-collapse: collapse;
+                   border-radius: 1em;
+                   overflow: hidden;
+                   font-family: Arial, Helvetica, sans-serif;
+               }
+
+               th, td {
+                   padding: 1em;
+                   background: #ddd;
+                   border-bottom: 2px solid white;
+               }
+
+               /* MAKE LEFT COLUMN FIXEZ */
+               tr > :first-child {
+                   background: #ff5b33 !important;
+                   left: 0;
+                   color: white;
+                   font-weight: 200;
+                   font-size: 18px;
+                   box-shadow: inset 0px 1px black;
+                   position: -webkit-sticky;
+                   position: sticky;
+                   background: hsl(180, 50%, 70%);
+                   background: hsl(20, 50%, 70%);
+                   left: 0;
+               }
+               /* don't do this */
+               /*  tr > :first-child {
+                   box-shadow: inset 0px 1px black;
+               }*/
+
+               .clear {
+                   clear: both;
+               }
+               /**
+        * Tabs
+        */
+               .tabs {
+                   display: flex;
+                   flex-wrap: wrap;
+                   // make sure it wraps
+               }
+
+                   .tabs label {
+                       order: 1;
+                       // Put the labels first display: block;
+                       padding: 1rem 2rem;
+                       margin-right: 0.2rem;
+                       cursor: pointer;
+                       /*background: #90CAF9;*/
+                       /*background: rgba(219,219,219,1);*/
+                       background: #FF7F50;
+                       font-weight: bold;
+                       -webkit-transition: background 0.5s linear;
+                       -ms-transition: background 0.5s linear;
+                       transition: background 0.5s linear;
+                       font-family: Arial;
+                       border: 1px dotted rgba(219,219,219,1);
+                       /*transition: background 0.1s ease;*/
+                       /* transition: background ease 0.2s;*/
+                   }
+
+                   .tabs .tab {
+                       order: 99;
+                       // Put the tabs last flex-grow: 1;
+                       width: 100%;
+                       display: none;
+                       /*padding: 1rem;*/
+                       background: #fff;
+                   }
+
+                   .tabs input[type="radio"] {
+                       display: none;
+                   }
+
+                       .tabs input[type="radio"]:checked + label {
+                           background: #fff;
+                       }
+
+                           .tabs input[type="radio"]:checked + label + .tab {
+                               display: block;
+                           }
+
+               @media (max-width: 45em) {
+                   .tabs .tab,
+                   .tabs label {
+                       order: initial;
+                   }
+
+                   .tabs label {
+                       width: 100%;
+                       margin-right: 0;
+                       margin-top: 0.2rem;
+                   }
+               }
+
+               .borders {
+                   border: 1px solid #ff5b33;
+                   border-collapse: collapse;
+                   border-radius: 1em;
+                   width: 99%;
+                   border-top-left-radius: 0em;
+                   border-top-right-radius: 0em;
+                   padding: 5px;
+               }
+    </style>
